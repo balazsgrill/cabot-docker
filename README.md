@@ -1,2 +1,2 @@
 # cabot-docker
-Dockerized cabot
+Dockerized [cabot](https://github.com/arachnys/cabot)
