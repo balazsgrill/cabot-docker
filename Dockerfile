@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install -y \
         libldap2-dev \
         libpq-dev \
         git \
-        npm && apt-get clean
+        npm
 
 RUN git clone https://github.com/arachnys/cabot.git
 
@@ -22,5 +22,12 @@ RUN npm install -g \
 RUN ln -s `which nodejs` /usr/bin/node
 
 RUN python setup.py install
+
+RUN apt-get purge -y python-dev \
+        libsasl2-dev \
+        libldap2-dev \
+        libpq-dev \
+        git \
+        && apt-get autoremove -y && apt-get clean
 
 CMD python manage.py runserver 0.0.0.0:5001
