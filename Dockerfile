@@ -2,7 +2,7 @@ FROM python:2.7-slim
 
 ENV PYTHONUNBUFFERED 1
 
-RUN apt-get update && apt-get install -y git
+RUN apt-get update && apt-get install -y git python-dev libsasl2-dev libldap2-dev libpq-dev
 RUN pip install fabric
 RUN git clone https://github.com/arachnys/cabot.git
 
