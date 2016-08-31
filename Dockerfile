@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install -y \
         git \
         npm && apt-get clean
 
-RUN git clone git@github.com:arachnys/cabot.git
+RUN git clone https://github.com/arachnys/cabot.git
 
 WORKDIR cabot
 
