@@ -21,6 +21,6 @@ RUN npm install -g \
 
 RUN ln -s `which nodejs` /usr/bin/node
 
-RUN setup.py
+RUN python cabot/setup.py
 
 COMMAND python manage.py runserver 0.0.0.0:5001
