@@ -7,7 +7,7 @@ RUN git clone https://github.com/arachnys/cabot.git
 
 WORKDIR cabot
 
-RUN python setup.py
+RUN python setup.py install
 
 EXPOSE 5001
 CMD python manage.py runserver 0.0.0.0:5001
