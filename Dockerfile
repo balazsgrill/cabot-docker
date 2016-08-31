@@ -21,11 +21,6 @@ RUN npm install -g \
 
 RUN ln -s `which nodejs` /usr/bin/node
 
-COPY requirements.txt ./requirements.txt
-
-RUN pip install --no-cache-dir -r requirements.txt
-
-COPY requirements-plugins.txt ./requirements-plugins.txt
-RUN pip install --no-cache-dir -r requirements-plugins.txt
+RUN setup.py
 
 COMMAND python manage.py runserver 0.0.0.0:5001
