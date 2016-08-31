@@ -2,7 +2,8 @@ FROM python:2.7-slim
 
 ENV PYTHONUNBUFFERED 1
 
-RUN apt-get install -y git fabric
+RUN apt-get install -y git
+RUN pip install fabric
 RUN git clone https://github.com/arachnys/cabot.git
 
 WORKDIR cabot
