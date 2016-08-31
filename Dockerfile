@@ -21,6 +21,6 @@ RUN npm install -g \
 
 RUN ln -s `which nodejs` /usr/bin/node
 
-RUN python setup.py
+RUN python setup.py install
 
 COMMAND python manage.py runserver 0.0.0.0:5001
